@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2024/02/27 19:34:05 schmonz Exp $
+# $NetBSD: Makefile,v 1.62 2024/02/28 12:34:10 wiz Exp $
 
 DISTNAME=	html2text-2024.2.26
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -9,6 +9,9 @@ MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	https://alir3z4.github.io/html2text/
 COMMENT=	Convert HTML into easy-to-read plain ASCII text
 LICENSE=	gnu-gpl-v3
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
